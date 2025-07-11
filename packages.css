@@ -1,0 +1,94 @@
+/* Packages Section Styles */
+.program-section {
+  width: 100vw;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3em 0;
+}
+.packages-heading-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+.packages-heading-text {
+  font-size: 2.2rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #222;
+  font-weight: 700;
+}
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2em;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.package-card {
+  background: #f7faff;
+  border-radius: 1.2em;
+  box-shadow: 0 2px 16px #6bb6ff22;
+  padding: 2em 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.package-img-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+.package-img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 1em;
+  box-shadow: 0 2px 16px #6bb6ff22;
+}
+.package-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #222;
+  margin: 1em 0;
+}
+.old-price {
+  text-decoration: line-through;
+  color: #aaa;
+  margin-right: 0.7em;
+}
+.discount-price {
+  color: #e74c3c;
+}
+.coming-soon-label {
+  background: #eee;
+  color: #aaa;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  margin-bottom: 1em;
+}
+.btn-primary {
+  background: #6bb6ff;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 2em;
+  padding: 0.7em 2em;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: background 0.3s;
+}
+.btn-primary:hover {
+  background: #4a90e2;
+}
+.btn-disabled {
+  background: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+}

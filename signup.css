@@ -1,0 +1,81 @@
+/* Sign Up Section Styles */
+.signup-section {
+  width: 100vw;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3em 0;
+}
+.hero-signup-form {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5em;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #f7faff;
+  border-radius: 1.5em;
+  box-shadow: 0 2px 16px #6bb6ff22;
+  padding: 2em;
+}
+.signup-photo-col {
+  flex: 0 0 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signup-coach-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 1em;
+  box-shadow: 0 2px 16px #6bb6ff22;
+}
+.signup-form-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.signup-form-col h2 {
+  font-size: 2rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #222;
+  margin-bottom: 1em;
+}
+.signup-form-col label {
+  font-weight: 600;
+  margin-top: 1em;
+  color: #222;
+}
+.signup-form-col input,
+.signup-form-col button {
+  font-size: 1.1rem;
+  padding: 0.7em 1em;
+  border-radius: 2em;
+  border: 1px solid #ccc;
+  margin-top: 0.5em;
+  width: 100%;
+  max-width: 340px;
+}
+.signup-form-col button {
+  background: #6bb6ff;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.2em;
+  transition: background 0.3s;
+}
+.signup-form-col button:hover {
+  background: #4a90e2;
+}
+#form-success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 1rem;
+}

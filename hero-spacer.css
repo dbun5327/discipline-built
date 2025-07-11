@@ -1,0 +1,175 @@
+/*
+  Styles for the hero-spacer (blank full-screen section between hero and sign-up)
+  All future About Me/hero-spacer content should be styled here.
+*/
+#hero-spacer {
+  width: 100vw;
+  min-height: 100vh;
+  background: transparent;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  #hero-spacer {
+    min-height: 60vh;
+  }
+}
+
+/*
+  About Me hero-spacer section: Aesthetic, modern, and matching the Discipline Built theme
+  - Card background, border-radius, and shadow
+  - Blue accent for heading
+  - Font and spacing match sign-up/packages
+  - Photo grid with soft border and glow
+  - Responsive and visually balanced
+*/
+.about-me-hero-spacer {
+  min-height: 100vh;
+  padding: 0;
+  background: linear-gradient(120deg, #f7faff 0%, #e3eaf7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.about-me-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120vw;
+  height: 80vh;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 3rem;
+  background: radial-gradient(circle at 60% 40%, #6bb6ff55 0%, #b6c7e622 60%, transparent 100%);
+  filter: blur(60px) brightness(1.2);
+  opacity: 0.7;
+  transition: opacity 0.7s cubic-bezier(.4,2,.6,1), filter 0.7s cubic-bezier(.4,2,.6,1);
+}
+.about-me-content {
+  max-width: 2160px;
+  min-height: 900px;
+  font-size: 1.6rem;
+  gap: 5.76rem;
+  padding: 5.25rem 6.3rem;
+  margin: 7.5rem auto 7.5rem auto;
+  background: #fff;
+  border-radius: 2.5rem;
+  box-shadow: 0 8px 48px 0 rgba(60,80,120,0.13);
+  border: 1.5px solid #e3eaf7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.35s cubic-bezier(.4,2,.6,1), box-shadow 0.35s cubic-bezier(.4,2,.6,1);
+  will-change: transform, box-shadow;
+}
+.about-me-content:hover {
+  transform: scale(1.025);
+  box-shadow: 0 16px 64px 0 rgba(60,80,120,0.18);
+}
+.about-me-photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.2rem;
+  width: 675px;
+  height: 675px;
+  min-width: 675px;
+  min-height: 675px;
+  max-width: 675px;
+  max-height: 675px;
+  aspect-ratio: 1 / 1;
+  box-sizing: border-box;
+  align-items: stretch;
+  justify-items: stretch;
+}
+.about-photo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  box-shadow: 0 3px 18px 0 rgba(60,80,120,0.10);
+  border: 2px solid #23233b; /* thin, soft blue border */
+  aspect-ratio: 1 / 1;
+  transition: all 0.35s cubic-bezier(.4,2,.6,1);
+  will-change: opacity, transform, z-index;
+  z-index: 1;
+  opacity: 1;
+}
+.about-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 0 0 transparent;
+  transition: box-shadow 0.35s cubic-bezier(.4,2,.6,1), opacity 0.35s cubic-bezier(.4,2,.6,1);
+  opacity: 0;
+  pointer-events: none;
+}
+.about-photo:hover {
+  z-index: 2;
+  transform: scale(1.35);
+  opacity: 1 !important;
+  border: 2.5px solid #23233b; /* slightly stronger blue border on hover */
+}
+.about-photo:hover::before {
+  box-shadow: 0 0 48px 24px #6bb6ff66, 0 0 0 2px #6bb6ff44;
+  opacity: 1;
+}
+.about-me-text {
+  font-size: 1.3rem;
+  padding: 1rem 0;
+  order: 2;
+}
+.about-me-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.about-me-text p {
+  font-size: 1.15rem;
+  padding: 1rem 1.3rem;
+  border-radius: 1rem;
+}
+@media (max-width: 900px) {
+  .about-me-content {
+    max-width: 98vw;
+    flex-direction: column;
+    min-height: 0;
+    font-size: 1.1rem;
+    padding: 1.5rem 0.7rem;
+    gap: 1.5rem;
+    margin: 2.5rem auto 2.5rem auto;
+  }
+  .about-me-photos {
+    width: 270px;
+    height: 270px;
+    min-width: 270px;
+    min-height: 270px;
+    max-width: 270px;
+    max-height: 270px;
+    gap: 0.6rem;
+  }
+  .about-photo {
+    border-radius: 0.7rem;
+  }
+  .about-me-text {
+    font-size: 1rem;
+    padding: 0.4rem 0;
+    order: 2;
+  }
+  .about-me-text h2 {
+    font-size: 1.2rem;
+  }
+  .about-me-text p {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 0.5rem;
+  }
+}

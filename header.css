@@ -1,0 +1,135 @@
+/* Header styles copied from style.css for modularity */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 2.4rem;
+  background: #000 !important; /* Pure black, no opacity */
+  color: #fff !important;
+  position: sticky;
+  top: 0;
+  z-index: 1002;
+  transition: box-shadow 0.3s, background 0.3s;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.main-title {
+  font-weight: 900;
+  font-size: 2.8rem;
+  position: relative;
+  transition: font-size 0.32s cubic-bezier(.4,2,.6,1), text-align 0.32s, margin 0.32s, left 0.32s, top 0.32s, transform 0.32s;
+  left: 0;
+  margin: 0 0 0 3rem;
+  text-align: left;
+}
+
+.glow {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3.5rem;
+  background: radial-gradient(circle, rgba(127, 159, 235, 0.7) 20%, transparent 80%);
+  filter: blur(25px);
+  transform: translateY(-50%);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.4rem;
+  position: relative;
+}
+
+.nav-links a {
+  color: #ccc;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.18rem;
+}
+
+.nav-links a:hover {
+  color: #7f9feb;
+}
+
+.nav-links a[data-tooltip]:hover::after,
+.nav-links a[data-tooltip]:focus::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -1.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #7f9feb;
+  color: white;
+  padding: 0.22rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  white-space: nowrap;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.nav-links a[data-tooltip]::after {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.nav-links a.show-tooltip::after {
+  opacity: 1 !important;
+  transition: opacity 0.3s;
+}
+
+.nav-links a.fading-tooltip::after {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.nav-links a.fading-tooltip:hover::after,
+.nav-links a.fading-tooltip:focus::after {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.nav-links a.fading-tooltip {
+  pointer-events: none;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: black;
+    width: 100vw;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem;
+  }
+}
+
+/* Make all header elements 1.2x bigger on desktop (min-width: 701px) */
+@media (min-width: 701px) {
+  .main-title {
+    font-size: 3.36rem;
+  }
+  .nav-links a,
+  .nav-link {
+    font-size: 1.42rem;
+    padding: 0.26em 0.84em;
+  }
+}
+
+/* Ensure sticky/fixed headers also use opacity */
+header.sticky, header.fixed {
+  background: #000 !important;
+  color: #fff !important;
+}

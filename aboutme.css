@@ -1,0 +1,65 @@
+/* About Me Section Styles */
+.about-me-hero-spacer {
+  width: 100vw;
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.about-me-glow {
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(90deg, #6bb6ff22 0%, #fff 100%);
+}
+.about-me-content {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5em;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.about-me-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em;
+}
+.about-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 1em;
+  box-shadow: 0 2px 16px #6bb6ff22;
+}
+.about-me-text {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.22rem;
+  color: #222;
+  max-width: 600px;
+}
+.about-socials {
+  display: flex;
+  gap: 1.2em;
+  justify-content: center;
+}
+.about-testimonials-btn {
+  margin-top: 1.5em;
+  padding: 0.7em 2.2em;
+  font-size: 1.13rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  color: #aaa;
+  background: #e3eaf7;
+  border: none;
+  border-radius: 2em;
+  box-shadow: 0 2px 16px #6bb6ff22;
+  cursor: not-allowed;
+  transition: background 0.3s, transform 0.2s;
+  position: relative;
+  opacity: 0.7;
+}

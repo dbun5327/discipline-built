@@ -1,0 +1,179 @@
+/* contact.css - Styles for Contact Me section */
+
+.contact-section {
+  width: 100%;
+  padding: 4.5em 0 3.5em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  background: #fff; /* Make background behind contact photos and form white */
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+  padding: 2.2rem 2.4rem;
+  max-width: 1200px; /* Increased from 900px */
+  width: 96vw;
+  display: block;
+  margin: 0 auto;
+  transition: box-shadow 0.3s;
+}
+
+.contact-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  min-height: 420px;
+}
+
+.contact-image-col {
+  flex: 1.1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 2.2em;
+  border-bottom-left-radius: 2.2em;
+  padding: 2.5em 1.5em 2.5em 2.5em;
+  gap: 1.2em;
+}
+
+.contact-photo {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 1.5em;
+  box-shadow: 0 2px 16px #6bb6ff33;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-form-col {
+  flex: 1.5 1 0;
+  padding: 2.5em 2.5em 2.5em 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff; /* Make contact form box background white and stand out */
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+  padding: 2.2rem 2.4rem;
+}
+
+.contact-title {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #1a2a3a;
+  margin-bottom: 1.2em;
+  text-align: left;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+}
+
+.contact-form label {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
+  color: #1a2a3a;
+  margin-bottom: 0.3em;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.08rem;
+  padding: 0.85em 1.1em;
+  border: 1.5px solid #b6d0f7;
+  border-radius: 1.1em;
+  background: #f7faff;
+  color: #222;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1.5px solid #6bb6ff;
+  box-shadow: 0 0 0 2px #b6d0f755;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+  max-height: 260px;
+}
+
+.contact-submit-btn {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, #6bb6ff 0%, #1a2a3a 100%);
+  border: none;
+  border-radius: 2em;
+  padding: 0.9em 2.5em;
+  margin-top: 0.7em;
+  box-shadow: 0 2px 16px #6bb6ff22;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.contact-submit-btn:hover {
+  background: linear-gradient(90deg, #1a2a3a 0%, #6bb6ff 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.contact-success-message {
+  color: #1aaf5d;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 1.2em;
+  text-align: left;
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    max-width: 99vw;
+    border-radius: 1.2em;
+  }
+  .contact-flex {
+    flex-direction: column;
+    min-height: unset;
+  }
+  .contact-image-col, .contact-form-col {
+    border-radius: 0;
+    padding: 2em 1em;
+  }
+  .contact-image-col {
+    border-top-left-radius: 1.2em;
+    border-top-right-radius: 1.2em;
+    border-bottom-left-radius: 0;
+    padding-bottom: 0.5em;
+  }
+  .contact-form-col {
+    border-bottom-left-radius: 1.2em;
+    border-bottom-right-radius: 1.2em;
+    border-top-right-radius: 0;
+    padding-top: 0.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 2.2em 0 1.5em 0;
+  }
+  .contact-title {
+    font-size: 1.4rem;
+  }
+  .contact-photo {
+    max-width: 160px;
+  }
+  .contact-form-col, .contact-image-col {
+    padding: 1.2em 0.7em;
+  }
+}
