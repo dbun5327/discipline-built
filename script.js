@@ -135,7 +135,7 @@ if (buyNowBtn && buyEmail) {
     buyNowBtn.disabled = true;
     buyNowBtn.textContent = 'Redirecting...';
     try {
-      const response = await fetch('https://a40b36a30e76.ngrok-free.app/create-checkout-session', {
+      const response = await fetch('https://discipline-built-28cw-hrm8rs529-davud-bunyatovs-projects.vercel.app/create-checkout-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
